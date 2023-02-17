@@ -32,21 +32,59 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8
        }, 
 
-    card: {},
-
-    cardElevated: {},
-
-    cardImage: {
-        height: 180
+    card: {
+        width: 340,
+        height: 380,
+        borderRadius: 8,
+        marginVertical: 12,
+        marginHorizontal: 16
     },
 
-    cardBody: {},
+    cardElevated: {
+        backgroundColor: '#fff',
+        elevation: 3,
+        shadowOffset: {
+            width: 1,
+            height: 1
+        }
+    },
 
-    cardTitle: {},
+    cardImage: {
+        height: 180,
+        marginBottom: 8,
+        borderTopLeftRadius: 8,
+        borderTopRightRadius: 8
+    },
 
-    cardLabel: {},
+    cardBody: {
+        flex :1,
+        flexGrow: 1,
+        paddingHorizontal: 12
+    },
 
-    cardDescription: {},
+    cardTitle: {
+        color: '#000',
+        fontSize: 22,
+        fontWeight: 'bold',
+        marginBottom: 6
+    },
 
-    cardFooter: {}
+    cardLabel: {
+        color: '#000',
+        fontSize: 14,
+        marginBottom: 4
+    },
+
+    cardDescription: {
+        color: '#3e3636',
+        fontSize: 12,
+        marginTop: 6,
+        flexShrink: 1
+
+    },
+
+    cardFooter: {
+        color: '#000'
+
+    }
 })
