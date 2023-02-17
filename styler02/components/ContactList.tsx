@@ -6,37 +6,37 @@ const ContactList = () => {
     {
         id: 1, 
         name: 'KNJ',
-        imageUrl: 'https://w0.peakpx.com/wallpaper/624/449/HD-wallpaper-tiny-tan-rm-bangtan-sonyeondan-bts-kim-namjoon-namjoon-rm-tiny-tan.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_00.png'
     },
     {
         id: 2, 
         name: 'KSJ',
-        imageUrl: 'https://i.pinimg.com/originals/0d/b9/1c/0db91c081e6fbb17a9d98c2f44390261.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_01.png'
     },
     {
         id: 3, 
         name: 'MYG',
-        imageUrl: 'https://w0.peakpx.com/wallpaper/277/350/HD-wallpaper-tiny-tan-suga-agust-d-bangtan-sonyeondan-bts-min-yoongi-tiny-tan-yoongi.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_02.png'
     },
     {
         id: 4, 
         name: 'JHS',
-        imageUrl: 'https://images.squarespace-cdn.com/content/v1/5aa2069c25bf02363bf5c7c4/1650436352227-D4P7ZDPAM47PNO5REOV1/BTS_Forest4.png'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_03.png'
     },
     {
         id: 5, 
         name: 'PJM',
-        imageUrl: 'https://w0.peakpx.com/wallpaper/731/583/HD-wallpaper-tiny-tan-jimin-bangtan-sonyeondan-bts-dynamite-park-jimin-tiny-tan.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_04.png'
     },
     {
         id: 6, 
         name: 'KTH',
-        imageUrl: 'https://i.pinimg.com/564x/2d/99/96/2d99961deef93c58de613ac9b5aa9331.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_05.png'
     },
     {
         id: 7, 
         name: 'JJK',
-        imageUrl: 'https://w0.peakpx.com/wallpaper/587/616/HD-wallpaper-tiny-tan-jungkook-bangtan-sonyeondan-bts-dynamite-jeon-jungkook-jk-kookie-tiny-tan.jpg'
+        imageUrl: 'https://fcbk.su/_data/stickers/tinytan/tinytan_06.png'
     },
   ];
   return (
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 
   userCard: {
     height: 200,
-    width:200,
+    width:150,
     backgroundColor: '#fffff',
     flex: 1,
     alignItems: 'center'
