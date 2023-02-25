@@ -1,5 +1,5 @@
 {
-  "name": "styler02",
+  "name": "passwordGenerator03",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,9 +11,7 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-dom": "^18.2.0",
-    "react-native": "0.71.3",
-    "react-native-web": "^0.18.12"
+    "react-native": "0.71.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

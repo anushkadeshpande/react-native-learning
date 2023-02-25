@@ -41,7 +41,7 @@ const ContactList = () => {
   ];
   return (
     <View >
-      <Text style={styles.headingText}>ContactList</Text>
+      <Text style={styles.headingText}>Cute Characters</Text>
       <ScrollView style={styles.container} scrollEnabled={true} horizontal>
         {contacts.map(({id, name, imageUrl}) => (
             <View key={id} style={styles.userCard}>
