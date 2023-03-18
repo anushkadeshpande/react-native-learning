@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   Image,
   ImageSourcePropType,
   SafeAreaView,
@@ -19,31 +20,65 @@ import {
   View,
 } from 'react-native';
 
-import DiceOne from '../assets/One.png'
-import DiceTwo from '../assets/Two.png'
-import DiceThree from '../assets/Three.png'
-import DiceFour from '../assets/Four.png'
-import DiceFive from '../assets/Five.png'
-import DiceSix from '../assets/Six.png'
+import DiceOne from '../assets/One.png';
+import DiceTwo from '../assets/Two.png';
+import DiceThree from '../assets/Three.png';
+import DiceFour from '../assets/Four.png';
+import DiceFive from '../assets/Five.png';
+import DiceSix from '../assets/Six.png';
 
 type DiceProps = PropsWithChildren<{
-  imageUrl: ImageSourcePropType
-}>
+  imageUrl: ImageSourcePropType;
+}>;
 
 const Dice = ({imageUrl}: DiceProps): JSX.Element => {
   return (
     <View>
       <Image style={styles.diceImage} source={imageUrl} />
     </View>
-  )
-}
+  );
+};
 
 function App(): JSX.Element {
+  const [diceNumber, setDiceNumber] = useState(DiceOne);
+
+  const rollTheDie = () => {
+    let diceNum = Math.floor(Math.random() * 6) + 1;
+
+    switch (diceNum) {
+      case 1:
+        setDiceNumber(DiceOne);
+        break;
+
+      case 2:
+        setDiceNumber(DiceTwo);
+        break;
+
+      case 3:
+        setDiceNumber(DiceThree);
+        break;
+
+      case 4:
+        setDiceNumber(DiceFour);
+        break;
+
+      case 5:
+        setDiceNumber(DiceFive);
+        break;
+
+      case 6:
+        setDiceNumber(DiceSix);
+        break;
+    }
+    // setDiceNum(dice)
+  };
 
   return (
     <View>
       <Text>Text</Text>
-      <Dice imageUrl={DiceOne}/>
+      <Dice imageUrl={diceNumber} />
+
+      <Button title="Roll" onPress={() => rollTheDie()} />
     </View>
   );
 }
