@@ -18,7 +18,9 @@ import {
   Text,
   useColorScheme,
   View,
+  Pressable
 } from 'react-native';
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
 
 import DiceOne from '../assets/One.png';
 import DiceTwo from '../assets/Two.png';
@@ -39,12 +41,17 @@ const Dice = ({imageUrl}: DiceProps): JSX.Element => {
   );
 };
 
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false,
+};
+
 function App(): JSX.Element {
   const [diceNumber, setDiceNumber] = useState(DiceOne);
 
   const rollTheDie = () => {
     let diceNum = Math.floor(Math.random() * 6) + 1;
-
+    ReactNativeHapticFeedback.trigger("impactLight", options);
     switch (diceNum) {
       case 1:
         setDiceNumber(DiceOne);
@@ -74,11 +81,21 @@ function App(): JSX.Element {
   };
 
   return (
-    <View>
-      <Text>Text</Text>
+    <View style={[styles.container]}>
+      {/* <Text>Text</Text> */}
       <Dice imageUrl={diceNumber} />
 
-      <Button title="Roll" onPress={() => rollTheDie()} />
+      {/* <Button title="Roll" onPress={() => rollTheDie()} /> */}
+
+      <Pressable
+      onPress={rollTheDie}
+      >
+        <Text
+        style={styles.rollDiceBtnText}
+        >
+        Roll the dice
+        </Text>
+      </Pressable>
     </View>
   );
 }
